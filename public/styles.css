@@ -125,9 +125,9 @@ p {
 .poke-info {
   position: relative;
   opacity: 0;
-  z-index: 2;
+  z-index: 1;
   color: whitesmoke;
-  background-color: inherit;
+  background-color: transparent;
   padding-top: 15px;
   font-size: 12px;
   font-weight: bold;
