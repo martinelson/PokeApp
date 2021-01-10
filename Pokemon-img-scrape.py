@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
 
 import requests
 import os
@@ -12,14 +7,8 @@ from tqdm import tqdm
 from urllib.parse import urljoin, urlparse
 
 
-# In[ ]:
-
 
 soup = bs(requests.get("PICK YOUR WEBSITE HERE").content, "html.parser")
-
-
-# In[ ]:
-
 
 urls = []
 # finds html tag with "img"
@@ -36,25 +25,12 @@ for img in tqdm(soup.find_all("img"), "Extracting images"):
     if not img_url:
         continue
     
-    
-
-
-# In[ ]:
-
 
 # change directory where to save here
 directory = os.path.join("/", "c:", "Desktop","Web Development", "Pokemon","public","images")
 os.chdir(directory)
 
-
-# In[ ]:
-
-
 print(directory)
-
-
-# In[ ]:
-
 
 #saves image to folder path
 for url in urls:
